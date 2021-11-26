@@ -18,10 +18,8 @@ int ListarPedidosClientes(ePedido listaPedido[], eCliente listaCliente[],
 	cantidad = 0;
 	if (listaPedido != NULL && listaCliente != NULL && listaLocalidad != NULL
 			&& tamPedido >= 0 && tamCliente >= 0 && tamLocalidad >= 0) {
-		printf(
-				" ___ _______________ ____________________ _______________ _______________ __________ \n");
-		printf(
-				"|ID |    Nombre     |       Cuit         |   Direccion   |   Localidad   | Cantidad |\n");
+		printf(" ___ _______________ ____________________ _______________ _______________ __________ \n");
+		printf("|ID |    Nombre     |       Cuit         |   Direccion   |   Localidad   | Cantidad |\n");
 		for (int i = 0; i < tamCliente; i++) {
 			if (listaCliente[i].isEmpty == FULL) {
 				for (int j = 0; j < tamPedido; j++) {
@@ -87,10 +85,8 @@ int ListarPedidosClientesProcesados(ePedido listaPedido[],
 	retorno = -1;
 	if (listaCliente != NULL && listaPedido != NULL && tamPedido >= 0
 			&& tamCliente >= 0) {
-		printf(
-				" ____________________ _______________ _____________ _____________ ___________ \n");
-		printf(
-				"|       Cuit         |   Direccion   |Cantidad HDPE|Cantidad LDPE|Cantidad PP|\n");
+		printf(" ____________________ _______________ _____________ _____________ ___________ \n");
+		printf("|       Cuit         |   Direccion   |Cantidad HDPE|Cantidad LDPE|Cantidad PP|\n");
 		for (int i = 0; i < tamPedido; i++) {
 			if (listaPedido[i].isEmpty == FULL
 					&& strcmp(listaPedido[i].estado, "Completado") == 0) {
@@ -182,7 +178,7 @@ int KilosPromedioPorCliente(ePedido listaPedido[], eCliente listaCliente[],
 	int retorno;
 	int acumuladorKilos;
 	float promedio;
-	retorno = -1
+	retorno = -1;
 	if (listaCliente != NULL && listaPedido != NULL && tamPedido >= 0
 			&& tamCliente >= 0) {
 		totalClientes = ClientesTotales(listaCliente, tamCliente);
@@ -235,10 +231,8 @@ int MostrarClienteMasPedientes(ePedido listaPedido[], eCliente listaCliente[],
 	}
 	if (flagMaximo == 1) {
 		printf("Cliente con mas pedidos pendientes: \n");
-		printf(
-				" ___ _______________ ____________________ _______________ ____________________ \n");
-		printf(
-				"|ID |    Nombre     |       Cuit         |   Direccion   |     Localidad      |\n");
+		printf(" ___ _______________ ____________________ _______________ ____________________ \n");
+		printf("|ID |    Nombre     |       Cuit         |   Direccion   |     Localidad      |\n");
 		NombrePorIdLocalidad(nombreLocalidad, listaLocalidad, tamLocalidad,
 				cliente.idLocalidad);
 		MostrarCliente(cliente, nombreLocalidad);
@@ -285,10 +279,8 @@ int MostrarClienteMasProcesados(ePedido listaPedido[], eCliente listaCliente[],
 	}
 	if (flagMaximo == 1) {
 		printf("Cliente con mas pedidos completados: \n");
-		printf(
-				" ___ _______________ ____________________ _______________ ____________________ \n");
-		printf(
-				"|ID |    Nombre     |       Cuit         |   Direccion   |     Localidad      |\n");
+		printf(" ___ _______________ ____________________ _______________ ____________________ \n");
+		printf("|ID |    Nombre     |       Cuit         |   Direccion   |     Localidad      |\n");
 		NombrePorIdLocalidad(nombreLocalidad, listaLocalidad, tamLocalidad,
 				cliente.idLocalidad);
 		MostrarCliente(cliente, nombreLocalidad);
@@ -334,10 +326,8 @@ int MostrarClienteMasPedidos(ePedido listaPedido[], eCliente listaCliente[],
 	}
 	if (flagMaximo == 1) {
 		printf("Cliente con mas pedidos: \n");
-		printf(
-				" ___ _______________ ____________________ _______________ ____________________ \n");
-		printf(
-				"|ID |    Nombre     |       Cuit         |   Direccion   |     Localidad      |\n");
+		printf(" ___ _______________ ____________________ _______________ ____________________ \n");
+		printf("|ID |    Nombre     |       Cuit         |   Direccion   |     Localidad      |\n");
 		NombrePorIdLocalidad(nombreLocalidad, listaLocalidad, tamLocalidad,
 				cliente.idLocalidad);
 		MostrarCliente(cliente, nombreLocalidad);

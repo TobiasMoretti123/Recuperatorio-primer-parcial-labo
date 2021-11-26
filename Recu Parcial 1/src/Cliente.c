@@ -116,8 +116,7 @@ int ModificarCliente(eCliente listaClientes[], int tamClientes,
 			} else {
 				NombrePorIdLocalidad(auxLocalidad, listaLocalidad, tamLocalidad,
 						listaClientes[posicion].idLocalidad);
-				printf(
-						"Usted va a modificar a:\n ID: %-3d\n Nombre: %-15s\n Direccion: %-15s\n Localidad: %-15s\n",
+				printf("Usted va a modificar a:\n ID: %-3d\n Nombre: %-15s\n Direccion: %-15s\n Localidad: %-15s\n",
 						listaClientes[posicion].idCliente,
 						listaClientes[posicion].nombreEmpresa,
 						listaClientes[posicion].direccion, auxLocalidad);
@@ -156,10 +155,8 @@ int ListarCliente(eCliente listaClientes[], eLocalidad listaLocalidad[],
 	retorno = -1;
 	if (listaClientes != NULL && listaLocalidad != NULL && tamClientes >= 0
 			&& tamLocalidad >= 0) {
-		printf(
-				" ___ _______________ ____________________ _______________ _______________ \n");
-		printf(
-				"|ID |    Nombre     |       Cuit         |   Direccion   |   Localidad   |\n");
+		printf(" ___ _______________ ____________________ _______________ _______________ \n");
+		printf("|ID |    Nombre     |       Cuit         |   Direccion   |   Localidad   |\n");
 		for (int i = 0; i < tamClientes; i++) {
 			if (listaClientes[i].isEmpty == FULL) {
 				NombrePorIdLocalidad(nombreLocalidad, listaLocalidad,
